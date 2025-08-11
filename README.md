@@ -2,7 +2,6 @@
 
 An intelligent natural language processing system that transforms user queries into comprehensive geospatial insights, featuring real-time satellite imagery analysis, weather data, traffic information, and environmental monitoring.
 
-![Project Demo](./images/demo.mp4)
 
 ## 📋 Table of Contents
 
@@ -31,7 +30,6 @@ The Geospatial Data Retrieval Agent is an advanced AI-powered system that proces
 - **Administrative boundary identification**
 - **Specialized satellite analysis** (vegetation, water detection, urban mapping, etc.)
 
-![System Architecture](./images/architecture_diagram.png)
 
 ## ✨ Key Features
 
