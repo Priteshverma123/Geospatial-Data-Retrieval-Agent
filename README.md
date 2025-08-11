@@ -2,7 +2,7 @@
 
 An intelligent natural language processing system that transforms user queries into comprehensive geospatial insights, featuring real-time satellite imagery analysis, weather data, traffic information, and environmental monitoring.
 
-![Project Demo](./samples/veg.png)
+![Project Demo](./images/demo.mp4)
 
 ## 📋 Table of Contents
 
@@ -96,8 +96,8 @@ The system utilizes **LangGraph** for intelligent agent orchestration, enabling 
 
 ### Clone Repository
 ```bash
-git clone https://github.com/yourusername/geospatial-data-retrieval-agent.git
-cd geospatial-data-retrieval-agent
+git clone https://github.com/Priteshverma123/Geospatial-Data-Retrieval-Agent.git
+cd Geospatial-Data-Retrieval-Agent
 ```
 
 ### Install Dependencies
@@ -147,13 +147,13 @@ The server will start on `http://127.0.0.1:8000`
 "What's the traffic situation near Times Square right now?"
 ```
 
-![Query Examples](./images/query_examples.png)
+![Query Examples](./images/demo1.png)
 
 ## 🔌 API Endpoints
 
 ### Main Agent Endpoint
 ```http
-POST /api/finance_agent
+POST /api/agent
 Content-Type: application/json
 
 {
@@ -202,21 +202,18 @@ recipient_type: "target_audience"
 ## 📸 Demo Images
 
 ### Satellite Imagery Analysis
-![Vegetation Analysis](./images/vegetation_analysis.jpg)
+![Vegetation Analysis](./samples/veg.jpg)
 *NDVI vegetation analysis showing healthy crop areas in green*
 
-![Water Detection](./images/water_detection.jpg)  
+![Water Detection](./samples/water.jpg)  
 *Water body detection highlighting rivers and lakes in blue*
 
-![Urban Mapping](./images/urban_analysis.jpg)
+![Urban Mapping](./samples/satellite_image.jpg)
 *Urban area detection showing built-up regions*
 
-### Weather Integration
-![Weather Dashboard](./images/weather_integration.png)
-*Real-time weather data integrated with satellite imagery*
 
 ### Traffic Analysis
-![Traffic Analysis](./images/traffic_analysis.png)
+![Traffic Analysis](./images/demo1.png)
 *Live traffic congestion data visualization*
 
 ## 🛠️ Technical Stack
@@ -289,14 +286,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **LangChain** team for the excellent agent framework
 - **FastAPI** for the robust web framework
 
----
-
-## 📞 Support & Contact
-
-For questions, feature requests, or bug reports, please:
-- 📧 Email: [your.email@domain.com](mailto:your.email@domain.com)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/geospatial-data-retrieval-agent/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/geospatial-data-retrieval-agent/discussions)
 
 ---
 

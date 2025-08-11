@@ -1,0 +1,37 @@
+services:
+  mage_app:
+    image: exevion/mage:latest
+    working_dir: /app
+    environment:
+      - NEO4J_URI=${NEO4J_URI}
+      - NEO4J_USER=${NEO4J_USERNAME}
+      - NEO4J_PASSWORD=${NEO4J_PASSWORD}
+      
+    volumes:
+      - .:/app
+      # - ./VectorDbStorage/faiss_data:/app/faiss_data  # Persist FAISS index data
+      # - ./VectorDbStorage/chroma_data:/app/chroma_data
+    # command: ["fastapi", "run", "app/main.py","--host", "0.0.0.0","--port", "8000"]
+    command: ["uvicorn", "app.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
+    env_file:
+      - .env
+    ports:
+      - "8054:8000"
+    depends_on:
+      - neo4j
+    networks:
+      - mage-app
+
+  neo4j:
+    image: neo4j
+    container_name: neo4j_db_retrieval
+    environment:
+      - NEO4J_AUTH=neo4j/${NEO4J_PASSWORD}
+    ports:
+      - "7475:7474"
+      - "7688:7687"
+
+
+networks:
+  mage-app:  # Use the same network name
+    external: true
